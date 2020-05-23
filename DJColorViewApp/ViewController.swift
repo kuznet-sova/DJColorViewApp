@@ -25,11 +25,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func redSwitchScroll() {
-        valueRedSwitch.text = String(redSwitch.value)
+        let newValueRedSwitch = Float(Int(redSwitch.value * 100)) / 100
+        valueRedSwitch.text = String(newValueRedSwitch)
     }
     @IBAction func greenSwitchScroll() {
+        let newValueGreenSwitch = Float(Int(greenSwitch.value * 100)) / 100
+        valueGreenSwitch.text = String(newValueGreenSwitch)
     }
     @IBAction func blueSwitchScroll() {
+        let newValueBlueSwitch = Float(Int(blueSwitch.value * 100)) / 100
+        valueBlueSwitch.text = String(newValueBlueSwitch)
     }
 }
 
