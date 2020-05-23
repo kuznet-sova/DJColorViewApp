@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func redSwitchScroll() {
+        valueRedSwitch.text = String(redSwitch.value)
     }
     @IBAction func greenSwitchScroll() {
     }
