@@ -27,14 +27,23 @@ class ViewController: UIViewController {
     @IBAction func redSwitchScroll() {
         let newValueRedSwitch = Float(Int(redSwitch.value * 100)) / 100
         valueRedSwitch.text = String(newValueRedSwitch)
+        
+        djColorView.backgroundColor = .red
+        djColorView.alpha = CGFloat(newValueRedSwitch)
     }
     @IBAction func greenSwitchScroll() {
         let newValueGreenSwitch = Float(Int(greenSwitch.value * 100)) / 100
         valueGreenSwitch.text = String(newValueGreenSwitch)
+        
+        djColorView.backgroundColor = .green
+        djColorView.alpha = CGFloat(newValueGreenSwitch)
     }
     @IBAction func blueSwitchScroll() {
         let newValueBlueSwitch = Float(Int(blueSwitch.value * 100)) / 100
         valueBlueSwitch.text = String(newValueBlueSwitch)
+        
+        djColorView.backgroundColor = .blue
+        djColorView.alpha = CGFloat(newValueBlueSwitch)
     }
 }
 
