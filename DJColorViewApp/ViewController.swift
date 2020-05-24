@@ -31,12 +31,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
         
-        redSlider.value = 0.00
-        valueRedSlider.text = String(format: "%.2f", Float(redSlider.value)) + " "
-        greenSlider.value = 0.00
-        valueGreenSlider.text = String(format: "%.2f", Float(greenSlider.value)) + " "
-        blueSlider.value = 0.00
-        valueBlueSlider.text = String(format: "%.2f", Float(blueSlider.value)) + " "
+        valueRedSlider.text = String(redSlider.value)
+        valueGreenSlider.text = String(greenSlider.value)
+        valueBlueSlider.text = String(blueSlider.value)
     }
     
     func mixColors() {
