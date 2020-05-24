@@ -26,10 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
-        
-        valueRedSlider.text = String(redSlider.value)
-        valueGreenSlider.text = String(greenSlider.value)
-        valueBlueSlider.text = String(blueSlider.value)
+        mixColors()
     }
     
     func mixColors() {
