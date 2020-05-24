@@ -23,27 +23,27 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-    var redColor: CGFloat = 0.0
-    var greenColor: CGFloat = 0.0
-    var blueColor: CGFloat = 0.0
+    var redColor: CGFloat = 0.00
+    var greenColor: CGFloat = 0.00
+    var blueColor: CGFloat = 0.00
     
     override func viewDidLoad() {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
         
-        redSlider.value = 0.0
-        valueRedSlider.text = "0.0"
-        greenSlider.value = 0.0
-        valueGreenSlider.text = "0.0"
-        blueSlider.value = 0.0
-        valueBlueSlider.text = "0.0"
+        redSlider.value = 0.00
+        valueRedSlider.text = "0.00"
+        greenSlider.value = 0.00
+        valueGreenSlider.text = "0.00"
+        blueSlider.value = 0.00
+        valueBlueSlider.text = "0.00"
         
     }
     
     func mixColors() {
         let mixColor = UIColor.init(red: redColor, green: greenColor, blue: blueColor, alpha: 1)
         
-        if redSlider.value == 0.0 && greenSlider.value == 0.0 && blueSlider.value == 0.0 {
+        if redSlider.value == 0.00 && greenSlider.value == 0.00 && blueSlider.value == 0.00 {
             djColorView.backgroundColor = .white
         } else {
             djColorView.backgroundColor = mixColor
