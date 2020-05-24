@@ -47,21 +47,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func redSliderScroll() {
-        let newValueRedSlider = Float(Int(redSlider.value * 100)) / 100
-        valueRedSlider.text = String(format: "%.2f", newValueRedSlider)
-        redColor = CGFloat(newValueRedSlider)
+        valueRedSlider.text = String(format: "%.2f", Float(redSlider.value))
+        redColor = CGFloat(redSlider.value)
         mixColors()
     }
     @IBAction func greenSliderScroll() {
-        let newValueGreenSlider = Float(Int(greenSlider.value * 100)) / 100
-        valueGreenSlider.text = String(format: "%.2f", newValueGreenSlider)
-        greenColor = CGFloat(newValueGreenSlider)
+        valueGreenSlider.text = String(format: "%.2f", Float(greenSlider.value))
+        greenColor = CGFloat(greenSlider.value)
         mixColors()
     }
     @IBAction func blueSliderScroll() {
-        let newValueBlueSlider = Float(Int(blueSlider.value * 100)) / 100
-        valueBlueSlider.text = String(format: "%.2f",newValueBlueSlider)
-        blueColor = CGFloat(newValueBlueSlider)
+        valueBlueSlider.text = String(format: "%.2f", Float(blueSlider.value))
+        blueColor = CGFloat(blueSlider.value)
         mixColors()
     }
 }
