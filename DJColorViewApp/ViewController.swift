@@ -81,4 +81,3 @@ class ViewController: UIViewController {
         mixColors()
     }
 }
-
