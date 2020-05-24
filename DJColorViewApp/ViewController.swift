@@ -27,16 +27,18 @@ class ViewController: UIViewController {
     var greenColor: CGFloat = 0.00
     var blueColor: CGFloat = 0.00
     
+    let mixColor = UIColor.init(red: redColor, green: greenColor, blue: blueColor, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
         
         redSlider.value = 0.00
-        valueRedSlider.text = "0.00"
+        valueRedSlider.text = "\(redSlider.value)"
         greenSlider.value = 0.00
-        valueGreenSlider.text = "0.00"
+        valueGreenSlider.text = "\(greenSlider.value)"
         blueSlider.value = 0.00
-        valueBlueSlider.text = "0.00"
+        valueBlueSlider.text = "\(blueSlider.value)"
         
     }
     
