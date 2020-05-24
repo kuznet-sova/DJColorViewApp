@@ -27,8 +27,6 @@ class ViewController: UIViewController {
     var greenColor: CGFloat = 0.00
     var blueColor: CGFloat = 0.00
     
-    let mixColor = UIColor.init(red: redColor, green: greenColor, blue: blueColor, alpha: 1)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
