@@ -38,8 +38,6 @@ class ViewController: UIViewController {
         blueSlider.value = 0.0
         valueBlueSlider.text = "0.0"
         
-        mixColors()
-        
     }
     
     func mixColors() {
@@ -52,34 +50,34 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func redSwitchScroll() {
-        let newValueRedSwitch = Float(Int(redSlider.value * 100)) / 100
-        valueRedSlider.text = String(newValueRedSwitch)
+    @IBAction func redSliderScroll() {
+        let newValueRedSlider = Float(Int(redSlider.value * 100)) / 100
+        valueRedSlider.text = String(newValueRedSlider)
         
         djColorView.backgroundColor = .red
-        djColorView.alpha = CGFloat(newValueRedSwitch)
+        djColorView.alpha = CGFloat(newValueRedSlider)
         
-        redColor = CGFloat(newValueRedSwitch)
+        redColor = CGFloat(newValueRedSlider)
         mixColors()
     }
-    @IBAction func greenSwitchScroll() {
-        let newValueGreenSwitch = Float(Int(greenSlider.value * 100)) / 100
-        valueGreenSlider.text = String(newValueGreenSwitch)
+    @IBAction func greenSliderScroll() {
+        let newValueGreenSlider = Float(Int(greenSlider.value * 100)) / 100
+        valueGreenSlider.text = String(newValueGreenSlider)
         
         djColorView.backgroundColor = .green
-        djColorView.alpha = CGFloat(newValueGreenSwitch)
+        djColorView.alpha = CGFloat(newValueGreenSlider)
         
-        greenColor = CGFloat(newValueGreenSwitch)
+        greenColor = CGFloat(newValueGreenSlider)
         mixColors()
     }
-    @IBAction func blueSwitchScroll() {
-        let newValueBlueSwitch = Float(Int(blueSlider.value * 100)) / 100
-        valueBlueSlider.text = String(newValueBlueSwitch)
+    @IBAction func blueSliderScroll() {
+        let newValueBlueSlider = Float(Int(blueSlider.value * 100)) / 100
+        valueBlueSlider.text = String(newValueBlueSlider)
         
         djColorView.backgroundColor = .blue
-        djColorView.alpha = CGFloat(newValueBlueSwitch)
+        djColorView.alpha = CGFloat(newValueBlueSlider)
         
-        blueColor = CGFloat(newValueBlueSwitch)
+        blueColor = CGFloat(newValueBlueSlider)
         mixColors()
     }
 }
