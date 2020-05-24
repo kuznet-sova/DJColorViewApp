@@ -11,10 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var djColorView: UIView!
     
-    @IBOutlet var redLabel: UILabel!
-    @IBOutlet var greenLabel: UILabel!
-    @IBOutlet var blueLabel: UILabel!
-    
     @IBOutlet var valueRedSlider: UILabel!
     @IBOutlet var valueGreenSlider: UILabel!
     @IBOutlet var valueBlueSlider: UILabel!
@@ -39,7 +35,7 @@ class ViewController: UIViewController {
     func mixColors() {
         let mixColor = UIColor.init(red: redColor, green: greenColor, blue: blueColor, alpha: 1)
         
-        if redSlider.value == 0.00 && greenSlider.value == 0.00 && blueSlider.value == 0.00 {
+        if redSlider.value == 0 && greenSlider.value == 0 && blueSlider.value == 0 {
             djColorView.backgroundColor = .black
         } else {
             djColorView.backgroundColor = mixColor

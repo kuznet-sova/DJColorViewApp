@@ -85,7 +85,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="redSliderScroll" destination="BYZ-38-t0r" eventType="valueChanged" id="J6m-Kb-nlR"/>
+                                                    <action selector="redSliderScroll" destination="BYZ-38-t0r" eventType="valueChanged" id="pFY-ZK-ctq"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="234" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="0rC-p3-6SZ">
@@ -121,13 +121,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="blueLabel" destination="3XG-2N-EBO" id="ahD-6N-b6H"/>
                         <outlet property="blueSlider" destination="BiV-a5-0Kl" id="jlh-bk-PpE"/>
                         <outlet property="djColorView" destination="D62-CP-Uh1" id="bAg-wx-3kq"/>
-                        <outlet property="greenLabel" destination="yjy-DM-l4K" id="BDp-42-glQ"/>
                         <outlet property="greenSlider" destination="0rC-p3-6SZ" id="hQP-Jy-e0V"/>
-                        <outlet property="redLabel" destination="evs-sb-Ree" id="23f-RB-0uV"/>
-                        <outlet property="redSlider" destination="Hjb-VS-h5h" id="ACO-8Z-z2h"/>
+                        <outlet property="redSlider" destination="Hjb-VS-h5h" id="uZl-IF-tfE"/>
                         <outlet property="valueBlueSlider" destination="UdY-QQ-dcY" id="w47-FG-xcs"/>
                         <outlet property="valueGreenSlider" destination="xuK-aE-ccx" id="eOf-Vq-xsp"/>
                         <outlet property="valueRedSlider" destination="22g-rI-Izc" id="bmL-15-m5v"/>
