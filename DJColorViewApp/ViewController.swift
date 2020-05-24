@@ -15,13 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
-    @IBOutlet var valueRedSwitch: UILabel!
-    @IBOutlet var valueGreenSwitch: UILabel!
-    @IBOutlet var valueBlueSwitch: UILabel!
+    @IBOutlet var valueRedSlider: UILabel!
+    @IBOutlet var valueGreenSlider: UILabel!
+    @IBOutlet var valueBlueSlider: UILabel!
     
-    @IBOutlet var redSwitch: UISlider!
-    @IBOutlet var greenSwitch: UISlider!
-    @IBOutlet var blueSwitch: UISlider!
+    @IBOutlet var redSlider: UISlider!
+    @IBOutlet var greenSlider: UISlider!
+    @IBOutlet var blueSlider: UISlider!
     
     var redColor: CGFloat = 0.0
     var greenColor: CGFloat = 0.0
@@ -30,16 +30,31 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
+        
+        redSlider.value = 0.0
+        valueRedSlider.text = "0.0"
+        greenSlider.value = 0.0
+        valueGreenSlider.text = "0.0"
+        blueSlider.value = 0.0
+        valueBlueSlider.text = "0.0"
+        
+        mixColors()
+        
     }
     
     func mixColors() {
         let mixColor = UIColor.init(red: redColor, green: greenColor, blue: blueColor, alpha: 1)
-        djColorView.backgroundColor = mixColor
+        
+        if redSlider.value == 0.0 && greenSlider.value == 0.0 && blueSlider.value == 0.0 {
+            djColorView.backgroundColor = .white
+        } else {
+            djColorView.backgroundColor = mixColor
+        }
     }
     
     @IBAction func redSwitchScroll() {
-        let newValueRedSwitch = Float(Int(redSwitch.value * 100)) / 100
-        valueRedSwitch.text = String(newValueRedSwitch)
+        let newValueRedSwitch = Float(Int(redSlider.value * 100)) / 100
+        valueRedSlider.text = String(newValueRedSwitch)
         
         djColorView.backgroundColor = .red
         djColorView.alpha = CGFloat(newValueRedSwitch)
@@ -48,8 +63,8 @@ class ViewController: UIViewController {
         mixColors()
     }
     @IBAction func greenSwitchScroll() {
-        let newValueGreenSwitch = Float(Int(greenSwitch.value * 100)) / 100
-        valueGreenSwitch.text = String(newValueGreenSwitch)
+        let newValueGreenSwitch = Float(Int(greenSlider.value * 100)) / 100
+        valueGreenSlider.text = String(newValueGreenSwitch)
         
         djColorView.backgroundColor = .green
         djColorView.alpha = CGFloat(newValueGreenSwitch)
@@ -58,8 +73,8 @@ class ViewController: UIViewController {
         mixColors()
     }
     @IBAction func blueSwitchScroll() {
-        let newValueBlueSwitch = Float(Int(blueSwitch.value * 100)) / 100
-        valueBlueSwitch.text = String(newValueBlueSwitch)
+        let newValueBlueSwitch = Float(Int(blueSlider.value * 100)) / 100
+        valueBlueSlider.text = String(newValueBlueSwitch)
         
         djColorView.backgroundColor = .blue
         djColorView.alpha = CGFloat(newValueBlueSwitch)

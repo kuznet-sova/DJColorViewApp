@@ -40,7 +40,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="234" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hjb-VS-h5h">
+                                            <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="234" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hjb-VS-h5h">
                                                 <rect key="frame" x="91.333333333333343" y="0.0" width="292.66666666666663" height="31"/>
                                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
@@ -64,7 +64,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="234" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0rC-p3-6SZ">
+                                            <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="234" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0rC-p3-6SZ">
                                                 <rect key="frame" x="103.33333333333334" y="0.0" width="280.66666666666663" height="31"/>
                                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
@@ -88,7 +88,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="234" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BiV-a5-0Kl">
+                                            <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="234" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BiV-a5-0Kl">
                                                 <rect key="frame" x="98.666666666666657" y="0.0" width="285.33333333333337" height="31"/>
                                                 <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
@@ -113,15 +113,15 @@
                     </view>
                     <connections>
                         <outlet property="blueLabel" destination="3XG-2N-EBO" id="ahD-6N-b6H"/>
-                        <outlet property="blueSwitch" destination="BiV-a5-0Kl" id="jlh-bk-PpE"/>
+                        <outlet property="blueSlider" destination="BiV-a5-0Kl" id="jlh-bk-PpE"/>
                         <outlet property="djColorView" destination="D62-CP-Uh1" id="bAg-wx-3kq"/>
                         <outlet property="greenLabel" destination="yjy-DM-l4K" id="BDp-42-glQ"/>
-                        <outlet property="greenSwitch" destination="0rC-p3-6SZ" id="hQP-Jy-e0V"/>
+                        <outlet property="greenSlider" destination="0rC-p3-6SZ" id="hQP-Jy-e0V"/>
                         <outlet property="redLabel" destination="evs-sb-Ree" id="23f-RB-0uV"/>
-                        <outlet property="redSwitch" destination="Hjb-VS-h5h" id="ACO-8Z-z2h"/>
-                        <outlet property="valueBlueSwitch" destination="UdY-QQ-dcY" id="Qba-JC-HFr"/>
-                        <outlet property="valueGreenSwitch" destination="xuK-aE-ccx" id="Gpx-i8-FdD"/>
-                        <outlet property="valueRedSwitch" destination="22g-rI-Izc" id="bmL-15-m5v"/>
+                        <outlet property="redSlider" destination="Hjb-VS-h5h" id="ACO-8Z-z2h"/>
+                        <outlet property="valueBlueSlider" destination="UdY-QQ-dcY" id="Qba-JC-HFr"/>
+                        <outlet property="valueGreenSlider" destination="xuK-aE-ccx" id="Gpx-i8-FdD"/>
+                        <outlet property="valueRedSlider" destination="22g-rI-Izc" id="bmL-15-m5v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
