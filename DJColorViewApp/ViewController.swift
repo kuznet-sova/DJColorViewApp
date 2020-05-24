@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         let mixColor = UIColor.init(red: redColor, green: greenColor, blue: blueColor, alpha: 1)
         
         if redSlider.value == 0.00 && greenSlider.value == 0.00 && blueSlider.value == 0.00 {
-            djColorView.backgroundColor = .white
+            djColorView.backgroundColor = .black
         } else {
             djColorView.backgroundColor = mixColor
         }
@@ -51,31 +51,19 @@ class ViewController: UIViewController {
     
     @IBAction func redSliderScroll() {
         let newValueRedSlider = Float(Int(redSlider.value * 100)) / 100
-        valueRedSlider.text = String(newValueRedSlider)
-        
-        djColorView.backgroundColor = .red
-        djColorView.alpha = CGFloat(newValueRedSlider)
-        
+        valueRedSlider.text = String(format: "%.2f", newValueRedSlider)
         redColor = CGFloat(newValueRedSlider)
         mixColors()
     }
     @IBAction func greenSliderScroll() {
         let newValueGreenSlider = Float(Int(greenSlider.value * 100)) / 100
-        valueGreenSlider.text = String(newValueGreenSlider)
-        
-        djColorView.backgroundColor = .green
-        djColorView.alpha = CGFloat(newValueGreenSlider)
-        
+        valueGreenSlider.text = String(format: "%.2f", newValueGreenSlider)
         greenColor = CGFloat(newValueGreenSlider)
         mixColors()
     }
     @IBAction func blueSliderScroll() {
         let newValueBlueSlider = Float(Int(blueSlider.value * 100)) / 100
-        valueBlueSlider.text = String(newValueBlueSlider)
-        
-        djColorView.backgroundColor = .blue
-        djColorView.alpha = CGFloat(newValueBlueSlider)
-        
+        valueBlueSlider.text = String(format: "%.2f",newValueBlueSlider)
         blueColor = CGFloat(newValueBlueSlider)
         mixColors()
     }
