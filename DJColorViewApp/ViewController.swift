@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var djColorView: UIView!
     
-    @IBOutlet var redLabel: UIStackView!
+    @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
+        mixColors()
     }
     
     func mixColors() {
@@ -45,7 +46,6 @@ class ViewController: UIViewController {
         djColorView.alpha = CGFloat(newValueRedSwitch)
         
         redColor = CGFloat(newValueRedSwitch)
-        mixColors()
     }
     @IBAction func greenSwitchScroll() {
         let newValueGreenSwitch = Float(Int(greenSwitch.value * 100)) / 100
@@ -55,7 +55,6 @@ class ViewController: UIViewController {
         djColorView.alpha = CGFloat(newValueGreenSwitch)
         
         greenColor = CGFloat(newValueGreenSwitch)
-        mixColors()
     }
     @IBAction func blueSwitchScroll() {
         let newValueBlueSwitch = Float(Int(blueSwitch.value * 100)) / 100
@@ -65,7 +64,6 @@ class ViewController: UIViewController {
         djColorView.alpha = CGFloat(newValueBlueSwitch)
         
         blueColor = CGFloat(newValueBlueSwitch)
-        mixColors()
     }
 }
 
