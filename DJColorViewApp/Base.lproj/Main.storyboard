@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Color View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DJColorViewApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DJColorViewController" customModule="DJColorViewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,7 +85,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="redSliderScroll" destination="BYZ-38-t0r" eventType="valueChanged" id="pFY-ZK-ctq"/>
+                                                    <action selector="djColorSliderScroll" destination="BYZ-38-t0r" eventType="valueChanged" id="QAn-8V-1uL"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="234" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="0rC-p3-6SZ">
@@ -93,7 +93,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="greenSliderScroll" destination="BYZ-38-t0r" eventType="valueChanged" id="Y9Q-3p-xxg"/>
+                                                    <action selector="djColorSliderScroll" destination="BYZ-38-t0r" eventType="valueChanged" id="fzc-Bt-ETl"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="234" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="BiV-a5-0Kl">
@@ -101,7 +101,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="blueSliderScroll" destination="BYZ-38-t0r" eventType="valueChanged" id="Z7W-Ys-YBO"/>
+                                                    <action selector="djColorSliderScroll" destination="BYZ-38-t0r" eventType="valueChanged" id="l99-rj-mbN"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -124,7 +124,7 @@
                         <outlet property="blueSlider" destination="BiV-a5-0Kl" id="jlh-bk-PpE"/>
                         <outlet property="djColorView" destination="D62-CP-Uh1" id="bAg-wx-3kq"/>
                         <outlet property="greenSlider" destination="0rC-p3-6SZ" id="hQP-Jy-e0V"/>
-                        <outlet property="redSlider" destination="Hjb-VS-h5h" id="uZl-IF-tfE"/>
+                        <outlet property="redSlider" destination="Hjb-VS-h5h" id="CJ1-lP-PKt"/>
                         <outlet property="valueBlueSlider" destination="UdY-QQ-dcY" id="w47-FG-xcs"/>
                         <outlet property="valueGreenSlider" destination="xuK-aE-ccx" id="eOf-Vq-xsp"/>
                         <outlet property="valueRedSlider" destination="22g-rI-Izc" id="bmL-15-m5v"/>
