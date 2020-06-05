@@ -19,10 +19,12 @@ class DJColorViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    var backgroundColorStartView: UIColor?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
-        mixColors()
+        djColorView.backgroundColor = backgroundColorStartView
     }
     
     func mixColors() {

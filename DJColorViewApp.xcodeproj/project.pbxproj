@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1C16A2248AF18F00C6317E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C16A1248AF18F00C6317E /* StartViewController.swift */; };
 		8C5CE1A72477300F00EE3146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CE1A62477300F00EE3146 /* AppDelegate.swift */; };
 		8C5CE1A92477300F00EE3146 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CE1A82477300F00EE3146 /* SceneDelegate.swift */; };
 		8C5CE1AB2477300F00EE3146 /* DJColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CE1AA2477300F00EE3146 /* DJColorViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C1C16A1248AF18F00C6317E /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		8C5CE1A32477300F00EE3146 /* DJColorViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DJColorViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5CE1A62477300F00EE3146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5CE1A82477300F00EE3146 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C1C169C248AEE6A00C6317E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C5CE1A62477300F00EE3146 /* AppDelegate.swift */,
+				8C5CE1A82477300F00EE3146 /* SceneDelegate.swift */,
+				8C5CE1AA2477300F00EE3146 /* DJColorViewController.swift */,
+				8C1C16A1248AF18F00C6317E /* StartViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8C1C169D248AEE8B00C6317E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8C5CE1AC2477301000EE3146 /* Main.storyboard */,
+				8C5CE1B12477301300EE3146 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8C1C169E248AEEB800C6317E /* Sourse */ = {
+			isa = PBXGroup;
+			children = (
+				8C5CE1AF2477301300EE3146 /* Assets.xcassets */,
+			);
+			path = Sourse;
+			sourceTree = "<group>";
+		};
 		8C5CE19A2477300F00EE3146 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +86,9 @@
 		8C5CE1A52477300F00EE3146 /* DJColorViewApp */ = {
 			isa = PBXGroup;
 			children = (
-				8C5CE1A62477300F00EE3146 /* AppDelegate.swift */,
-				8C5CE1A82477300F00EE3146 /* SceneDelegate.swift */,
-				8C5CE1AA2477300F00EE3146 /* DJColorViewController.swift */,
-				8C5CE1AC2477301000EE3146 /* Main.storyboard */,
-				8C5CE1AF2477301300EE3146 /* Assets.xcassets */,
-				8C5CE1B12477301300EE3146 /* LaunchScreen.storyboard */,
+				8C1C169C248AEE6A00C6317E /* ViewControllers */,
+				8C1C169D248AEE8B00C6317E /* Storyboards */,
+				8C1C169E248AEEB800C6317E /* Sourse */,
 				8C5CE1B42477301300EE3146 /* Info.plist */,
 			);
 			path = DJColorViewApp;
@@ -139,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C5CE1AB2477300F00EE3146 /* DJColorViewController.swift in Sources */,
+				8C1C16A2248AF18F00C6317E /* StartViewController.swift in Sources */,
 				8C5CE1A72477300F00EE3146 /* AppDelegate.swift in Sources */,
 				8C5CE1A92477300F00EE3146 /* SceneDelegate.swift in Sources */,
 			);

@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="ZGe-bB-eEn">
             <objects>
-                <viewController id="dxj-Zl-hKC" sceneMemberID="viewController">
+                <viewController id="dxj-Zl-hKC" customClass="StartViewController" customModule="DJColorViewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B6Z-UR-6gY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,10 +32,14 @@
                     <navigationItem key="navigationItem" id="HS9-ic-UO8">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="oo5-c4-g4O">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="nAS-oE-eHo"/>
+                                <action selector="editColorViewButton:" destination="dxj-Zl-hKC" id="WRc-RM-6U1"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="djColorSegue" modalPresentationStyle="fullScreen" id="nAS-oE-eHo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="startViewController" destination="B6Z-UR-6gY" id="t2D-qR-wUO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4XN-CY-K8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
