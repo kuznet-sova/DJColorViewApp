@@ -52,4 +52,9 @@ class DJColorViewController: UIViewController {
         
         mixColors()
     }
+    
+    @IBAction func doneButton() {
+        
+        dismiss(animated: true)
+    }
 }
