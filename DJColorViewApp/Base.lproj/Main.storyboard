@@ -85,7 +85,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="djColorSliderScroll" destination="BYZ-38-t0r" eventType="valueChanged" id="QAn-8V-1uL"/>
+                                                    <action selector="valueColorSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="nWG-vX-mx4"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="234" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="0rC-p3-6SZ">
@@ -93,7 +93,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="djColorSliderScroll" destination="BYZ-38-t0r" eventType="valueChanged" id="fzc-Bt-ETl"/>
+                                                    <action selector="valueColorSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="ef1-cP-4j2"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="234" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="BiV-a5-0Kl">
@@ -101,7 +101,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="djColorSliderScroll" destination="BYZ-38-t0r" eventType="valueChanged" id="l99-rj-mbN"/>
+                                                    <action selector="valueColorSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="GJp-4M-FAC"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
