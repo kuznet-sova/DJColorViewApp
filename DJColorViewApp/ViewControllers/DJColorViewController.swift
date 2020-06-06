@@ -72,14 +72,11 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
             Float(blueSlider.value)
         )
         
-        chooseColorTextField()
+        valueRedTextField.text = valueRedSlider.text
+        valueGreenTextField.text = valueGreenSlider.text
+        valueBlueTextField.text = valueBlueSlider.text
+        
         mixColors()
-    }
-    
-    @IBAction func chooseColorTextField() {
-//        valueRedTextField.text = valueRedSlider.text
-//        valueGreenTextField.text = valueGreenSlider.text
-//        valueBlueTextField.text = valueBlueSlider.text
     }
     
     @IBAction func doneButton() {
