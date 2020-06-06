@@ -43,6 +43,10 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
         valueGreenTextField.inputAccessoryView = toolBar
         valueBlueTextField.inputAccessoryView = toolBar
         
+        valueRedTextField.keyboardType = .decimalPad
+        valueGreenTextField.keyboardType = .decimalPad
+        valueBlueTextField.keyboardType = .decimalPad
+        
         rgbValueForColor()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
