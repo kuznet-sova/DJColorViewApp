@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DJColorViewController: UIViewController {
+class DJColorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var djColorView: UIView!
     
     @IBOutlet var valueRedSlider: UILabel!
@@ -30,26 +30,15 @@ class DJColorViewController: UIViewController {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
         djColorView.backgroundColor = backgroundColorStartView
+//        valueRedTextField.delegate = self
+//        valueGreenTextField.delegate = self
+//        valueBlueTextField.delegate = self
+        
         rgbValueForColor()
     }
-    
-    func mixColors() {
-        let mixColor = UIColor.init(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1
-        )
-
-        djColorView.backgroundColor = mixColor
-    }
-    
-    func rgbValueForColor() {
-        let rgbValueColor = backgroundColorStartView!.rgba
-        redSlider.value = Float(rgbValueColor.red)
-        greenSlider.value = Float(rgbValueColor.green)
-        blueSlider.value = Float(rgbValueColor.blue)
-        valueColorSlider()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction func valueColorSlider() {
@@ -79,6 +68,25 @@ class DJColorViewController: UIViewController {
     @IBAction func doneButton() {
         delegateColorView.startViewColor(djColorView.backgroundColor!)
         dismiss(animated: true)
+    }
+    
+    func mixColors() {
+        let mixColor = UIColor.init(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1
+        )
+
+        djColorView.backgroundColor = mixColor
+    }
+    
+    func rgbValueForColor() {
+        let rgbValueColor = backgroundColorStartView!.rgba
+        redSlider.value = Float(rgbValueColor.red)
+        greenSlider.value = Float(rgbValueColor.green)
+        blueSlider.value = Float(rgbValueColor.blue)
+        valueColorSlider()
     }
 }
 
