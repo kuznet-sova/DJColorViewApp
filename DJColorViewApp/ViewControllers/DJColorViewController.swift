@@ -31,6 +31,10 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
         djColorView.layer.cornerRadius = 20
         djColorView.backgroundColor = backgroundColorStartView
         
+        valueRedTextField.delegate = self
+        valueGreenTextField.delegate = self
+        valueBlueTextField.delegate = self
+        
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         
@@ -73,9 +77,9 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func chooseColorTextField() {
-        valueRedTextField.text = valueRedSlider.text
-        valueGreenTextField.text = valueGreenSlider.text
-        valueBlueTextField.text = valueBlueSlider.text
+//        valueRedTextField.text = valueRedSlider.text
+//        valueGreenTextField.text = valueGreenSlider.text
+//        valueBlueTextField.text = valueBlueSlider.text
     }
     
     @IBAction func doneButton() {
@@ -100,6 +104,27 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
         greenSlider.value = Float(rgbValueColor.green)
         blueSlider.value = Float(rgbValueColor.blue)
         valueColorSlider()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
+        var newColorValue: Float?
+        
+        if textField == valueRedTextField {
+            valueRedSlider.text = textField.text
+            newColorValue = Float(textField.text!)
+            redSlider.value = newColorValue!
+        }
+        else if textField == valueGreenTextField {
+            valueGreenSlider.text = textField.text
+            newColorValue = Float(textField.text!)
+            greenSlider.value = newColorValue!
+        }
+        else if textField == valueBlueTextField {
+            valueBlueSlider.text = textField.text
+            newColorValue = Float(textField.text!)
+            blueSlider.value = newColorValue!
+        }
     }
     
     @objc func doneKeyboardButtonClicked() {
