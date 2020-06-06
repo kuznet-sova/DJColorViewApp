@@ -26,6 +26,7 @@ class DJColorViewController: UIViewController {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
         djColorView.backgroundColor = backgroundColorStartView
+        rgbValueForColor()
     }
     
     func mixColors() {
@@ -37,6 +38,14 @@ class DJColorViewController: UIViewController {
         )
 
         djColorView.backgroundColor = mixColor
+    }
+    
+    func rgbValueForColor() {
+        let rgbValueColor = backgroundColorStartView!.rgba
+        redSlider.value = Float(rgbValueColor.red)
+        greenSlider.value = Float(rgbValueColor.green)
+        blueSlider.value = Float(rgbValueColor.blue)
+        valueColorSlider()
     }
     
     @IBAction func valueColorSlider() {
@@ -59,5 +68,17 @@ class DJColorViewController: UIViewController {
     @IBAction func doneButton() {
         delegateColorView.startViewColor(djColorView.backgroundColor!)
         dismiss(animated: true)
+    }
+}
+
+extension UIColor {
+    var rgba: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        return (red, green, blue, alpha)
     }
 }
