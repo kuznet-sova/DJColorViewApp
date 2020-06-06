@@ -20,6 +20,7 @@ class DJColorViewController: UIViewController {
     @IBOutlet var blueSlider: UISlider!
     
     var backgroundColorStartView: UIColor?
+    var delegateColorView: DJColorViewDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +57,7 @@ class DJColorViewController: UIViewController {
     }
     
     @IBAction func doneButton() {
-        
+        delegateColorView.startViewColor(djColorView.backgroundColor!)
         dismiss(animated: true)
     }
 }
