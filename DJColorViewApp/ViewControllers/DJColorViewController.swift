@@ -30,9 +30,18 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
         djColorView.backgroundColor = backgroundColorStartView
-//        valueRedTextField.delegate = self
-//        valueGreenTextField.delegate = self
-//        valueBlueTextField.delegate = self
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let doneKeyboardButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneKeyboardButtonClicked))
+        
+        toolBar.setItems([flexibleSpace, doneKeyboardButton], animated: false)
+        valueRedTextField.inputAccessoryView = toolBar
+        valueGreenTextField.inputAccessoryView = toolBar
+        valueBlueTextField.inputAccessoryView = toolBar
         
         rgbValueForColor()
     }
@@ -87,6 +96,10 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
         greenSlider.value = Float(rgbValueColor.green)
         blueSlider.value = Float(rgbValueColor.blue)
         valueColorSlider()
+    }
+    
+    @objc func doneKeyboardButtonClicked() {
+        view.endEditing(true)
     }
 }
 
