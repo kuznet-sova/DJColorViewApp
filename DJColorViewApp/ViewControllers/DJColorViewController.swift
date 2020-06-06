@@ -122,6 +122,8 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
             newColorValue = Float(textField.text!)
             blueSlider.value = newColorValue!
         }
+        
+        mixColors()
     }
     
     @objc func doneKeyboardButtonClicked() {
