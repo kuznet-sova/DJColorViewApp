@@ -107,17 +107,26 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
         if textField == valueRedTextField {
             valueRedLabel.text = textField.text
             newColorValue = getFloat(string: textField.text)
-            redSlider.value = getColorValue(colorValue: newColorValue)
+            redSlider.value = getColorValue(
+                colorValue: newColorValue,
+                colorSliderMinValue: redSlider.minimumValue
+            )
         }
         else if textField == valueGreenTextField {
             valueGreenLabel.text = textField.text
             newColorValue = getFloat(string: textField.text)
-            greenSlider.value = getColorValue(colorValue: newColorValue)
+            greenSlider.value = getColorValue(
+                colorValue: newColorValue,
+                colorSliderMinValue: greenSlider.minimumValue
+            )
         }
         else if textField == valueBlueTextField {
             valueBlueLabel.text = textField.text
             newColorValue = getFloat(string: textField.text)
-            blueSlider.value = getColorValue(colorValue: newColorValue)
+            blueSlider.value = getColorValue(
+                colorValue: newColorValue,
+                colorSliderMinValue: greenSlider.minimumValue
+            )
         }
         
         mixColors()
@@ -134,10 +143,10 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
         return String (format: "%.2f", float)
     }
     
-    func getColorValue(colorValue: Float?) -> Float {
-        guard let colorValue = colorValue
-            else { return 0 }
-        return colorValue
+    func getColorValue(colorValue: Float?, colorSliderMinValue: Float) -> Float {
+        guard colorValue != nil
+            else { return colorSliderMinValue }
+        return colorValue!
     }
     
     @objc func doneKeyboardButtonClicked() {
