@@ -102,31 +102,31 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
 
-        var newColorValue: Float?
+        let newColorValue = getFloat(string: textField.text)
         
         if textField == valueRedTextField {
-            valueRedLabel.text = textField.text
-            newColorValue = getFloat(string: textField.text)
             redSlider.value = getColorValue(
                 colorValue: newColorValue,
                 colorSliderMinValue: redSlider.minimumValue
             )
+            valueRedLabel.text = getString(float: redSlider.value)
+            valueRedTextField.text = getString(float: redSlider.value)
         }
         else if textField == valueGreenTextField {
-            valueGreenLabel.text = textField.text
-            newColorValue = getFloat(string: textField.text)
             greenSlider.value = getColorValue(
                 colorValue: newColorValue,
                 colorSliderMinValue: greenSlider.minimumValue
             )
+            valueGreenLabel.text = getString(float: greenSlider.value)
+            valueGreenTextField.text = getString(float: greenSlider.value)
         }
         else if textField == valueBlueTextField {
-            valueBlueLabel.text = textField.text
-            newColorValue = getFloat(string: textField.text)
             blueSlider.value = getColorValue(
                 colorValue: newColorValue,
                 colorSliderMinValue: greenSlider.minimumValue
             )
+            valueBlueLabel.text = getString(float: blueSlider.value)
+            valueBlueTextField.text = getString(float: blueSlider.value)
         }
         
         mixColors()
