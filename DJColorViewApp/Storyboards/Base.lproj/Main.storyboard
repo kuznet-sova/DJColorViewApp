@@ -32,14 +32,10 @@
                     <navigationItem key="navigationItem" id="HS9-ic-UO8">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="oo5-c4-g4O">
                             <connections>
-                                <action selector="editColorViewButton:" destination="dxj-Zl-hKC" id="WRc-RM-6U1"/>
                                 <segue destination="BYZ-38-t0r" kind="presentation" identifier="djColorSegue" modalPresentationStyle="fullScreen" id="nAS-oE-eHo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="startViewController" destination="B6Z-UR-6gY" id="t2D-qR-wUO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4XN-CY-K8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

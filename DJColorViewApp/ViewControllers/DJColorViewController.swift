@@ -23,7 +23,7 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var valueGreenTextField: UITextField!
     @IBOutlet var valueBlueTextField: UITextField!
     
-    var startViewBackgroundColor: UIColor?
+    var startViewBackgroundColor: UIColor!
     var delegateColorView: DJColorViewDelegate!
     
     override func viewDidLoad() {
@@ -82,7 +82,7 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
     }
     
     func mixColors() {
-        let mixColor = UIColor.init(
+        let mixColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
@@ -93,7 +93,7 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
     }
     
     func rgbValueForColor() {
-        let rgbValueColor = startViewBackgroundColor!.rgba
+        let rgbValueColor = startViewBackgroundColor.rgba
         redSlider.value = Float(rgbValueColor.red)
         greenSlider.value = Float(rgbValueColor.green)
         blueSlider.value = Float(rgbValueColor.blue)
