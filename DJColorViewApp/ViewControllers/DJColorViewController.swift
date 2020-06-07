@@ -11,9 +11,9 @@ import UIKit
 class DJColorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var djColorView: UIView!
     
-    @IBOutlet var valueRedSlider: UILabel!
-    @IBOutlet var valueGreenSlider: UILabel!
-    @IBOutlet var valueBlueSlider: UILabel!
+    @IBOutlet var valueRedLabel: UILabel!
+    @IBOutlet var valueGreenLabel: UILabel!
+    @IBOutlet var valueBlueLabel: UILabel!
     
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
@@ -23,13 +23,13 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var valueGreenTextField: UITextField!
     @IBOutlet var valueBlueTextField: UITextField!
     
-    var backgroundColorStartView: UIColor?
+    var startViewBackgroundColor: UIColor?
     var delegateColorView: DJColorViewDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         djColorView.layer.cornerRadius = 20
-        djColorView.backgroundColor = backgroundColorStartView
+        djColorView.backgroundColor = startViewBackgroundColor
         
         valueRedTextField.delegate = self
         valueGreenTextField.delegate = self
@@ -59,22 +59,19 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func valueColorSlider() {
-        valueRedSlider.text = String(
-            format: "%.2f",
-            Float(redSlider.value)
+        valueRedLabel.text = getString(
+            float: Float(redSlider.value)
         )
-        valueGreenSlider.text = String(
-            format: "%.2f",
-            Float(greenSlider.value)
+        valueGreenLabel.text = getString(
+            float: Float(greenSlider.value)
         )
-        valueBlueSlider.text = String(
-            format: "%.2f",
-            Float(blueSlider.value)
+        valueBlueLabel.text = getString(
+            float: Float(blueSlider.value)
         )
         
-        valueRedTextField.text = valueRedSlider.text
-        valueGreenTextField.text = valueGreenSlider.text
-        valueBlueTextField.text = valueBlueSlider.text
+        valueRedTextField.text = valueRedLabel.text
+        valueGreenTextField.text = valueGreenLabel.text
+        valueBlueTextField.text = valueBlueLabel.text
         
         mixColors()
     }
@@ -96,7 +93,7 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
     }
     
     func rgbValueForColor() {
-        let rgbValueColor = backgroundColorStartView!.rgba
+        let rgbValueColor = startViewBackgroundColor!.rgba
         redSlider.value = Float(rgbValueColor.red)
         greenSlider.value = Float(rgbValueColor.green)
         blueSlider.value = Float(rgbValueColor.blue)
@@ -108,22 +105,32 @@ class DJColorViewController: UIViewController, UITextFieldDelegate {
         var newColorValue: Float?
         
         if textField == valueRedTextField {
-            valueRedSlider.text = textField.text
-            newColorValue = Float(textField.text!)
+            valueRedLabel.text = textField.text
+            newColorValue = getFloat(string: textField.text)
             redSlider.value = newColorValue!
         }
         else if textField == valueGreenTextField {
-            valueGreenSlider.text = textField.text
-            newColorValue = Float(textField.text!)
+            valueGreenLabel.text = textField.text
+            newColorValue = getFloat(string: textField.text)
             greenSlider.value = newColorValue!
         }
         else if textField == valueBlueTextField {
-            valueBlueSlider.text = textField.text
-            newColorValue = Float(textField.text!)
+            valueBlueLabel.text = textField.text
+            newColorValue = getFloat(string: textField.text)
             blueSlider.value = newColorValue!
         }
         
         mixColors()
+    }
+    
+    func getFloat(string: String?) -> Float? {
+        guard let string = string else { return nil }
+        return Float(string)
+    }
+    
+    func getString(float: Float) -> String {
+        let float = float
+        return String (format: "%.2f", float)
     }
     
     @objc func doneKeyboardButtonClicked() {

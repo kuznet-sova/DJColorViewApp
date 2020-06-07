@@ -199,11 +199,11 @@
                         <outlet property="djColorView" destination="D62-CP-Uh1" id="bAg-wx-3kq"/>
                         <outlet property="greenSlider" destination="0rC-p3-6SZ" id="hQP-Jy-e0V"/>
                         <outlet property="redSlider" destination="Hjb-VS-h5h" id="CJ1-lP-PKt"/>
-                        <outlet property="valueBlueSlider" destination="UdY-QQ-dcY" id="w47-FG-xcs"/>
+                        <outlet property="valueBlueLabel" destination="UdY-QQ-dcY" id="w47-FG-xcs"/>
                         <outlet property="valueBlueTextField" destination="t0B-A9-iA0" id="5tF-AN-7YO"/>
-                        <outlet property="valueGreenSlider" destination="xuK-aE-ccx" id="eOf-Vq-xsp"/>
+                        <outlet property="valueGreenLabel" destination="xuK-aE-ccx" id="eOf-Vq-xsp"/>
                         <outlet property="valueGreenTextField" destination="gXk-41-7Mf" id="8rR-hr-UVf"/>
-                        <outlet property="valueRedSlider" destination="22g-rI-Izc" id="bmL-15-m5v"/>
+                        <outlet property="valueRedLabel" destination="22g-rI-Izc" id="bmL-15-m5v"/>
                         <outlet property="valueRedTextField" destination="3he-Md-e1k" id="wRR-U3-glE"/>
                     </connections>
                 </viewController>

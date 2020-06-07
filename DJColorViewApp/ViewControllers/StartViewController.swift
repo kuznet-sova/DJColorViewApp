@@ -19,7 +19,7 @@ class StartViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let djColorView = segue.destination as? DJColorViewController
             else { return }
-        djColorView.backgroundColorStartView = startViewController.backgroundColor
+        djColorView.startViewBackgroundColor = startViewController.backgroundColor
         djColorView.delegateColorView = self
     }
     
